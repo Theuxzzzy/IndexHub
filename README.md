@@ -1,6 +1,7 @@
 local Players = game:GetService("Players")
 local player = Players.LocalPlayer
 local playerScripts = player:WaitForChild("PlayerScripts")
+local StarterGui = game:GetService("StarterGui")
 
 local afkScripts = {}
 
@@ -86,5 +87,16 @@ local AntiAfk = MainTab:CreateToggle({
        else
            enableAFK()
        end
+   end,
+})
+
+local StarterGui = game:GetService("StarterGui")
+
+local Chat = MainTab:CreateButton({
+   Name = "Ligar Chat",
+   Callback = function()
+       pcall(function()
+	StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.All, true)
+       end)
    end,
 })
