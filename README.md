@@ -431,3 +431,13 @@ VisualTab:CreateButton({
 		restoreOriginalAppearance()
 	end
 })
+
+-- ============================================================
+-- EXTRAS TAB
+-- ============================================================
+local ExtrasTab = Window:CreateTab("Extras", 4483362458)
+
+ExtrasTab:CreateParagraph({
+	Title = "Extras",
+	Content = "Em breve mais funcionalidades!"
+})
